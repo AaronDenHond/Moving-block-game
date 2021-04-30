@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    /* we want to use the whole page*/
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* centering game-board in the middle of our screen */
+    margin: 0;
+    /*we dont want margins */
+    background-color: black;
+}
+
+#game-board {
+    background-color: aliceblue;
+    width: 100vmin;
+    /* this will always keep our game-board square */
+    height: 100vmin;
+    /*we want to make 21 squares same size no matter what res */
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    /* repeat 21 row same width, fr is fraction, fairly new unit of measurement, automatically calculates column/row widths even with margins so no overflow*/
+    grid-template-columns: repeat(21, 1fr);
+    /* repeat 21 columns same width, fr is fraction, fairly new unit of measurement, automatically calculates column/row widths even with margins so no overflow*/
+    /*grid met 21 op 21 exact same squares*/
+}
+
+.snake {
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+.food {
+    background-color: blue;
+    border: 2px solid black;
+}
